@@ -32,7 +32,6 @@ for link in all_links:
     # print(link)
     name = soup.select('h1')[1].getText()
     print(name)
-    #press "commitee" button
     res = requests.post('https://www.stirlingstudentsunion.com' + link, data={'committee': 'committee'})
     soup = bs4.BeautifulSoup(res.text, 'html.parser')
     
